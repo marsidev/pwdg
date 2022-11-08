@@ -27,12 +27,6 @@ jobs:
       - name: Setup
         run: npm i -g @antfu/ni
 
-      - name: Install
-        run: nci
-
-      - name: Build
-        run: nr build
-
       - name: Lint
         run: nr lint
 
@@ -55,9 +49,6 @@ jobs:
 
       - name: Install
         run: nci
-
-      - name: Build
-        run: nr build
 
       - name: Typecheck
         run: nr typecheck
