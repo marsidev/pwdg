@@ -6,13 +6,9 @@ import { generatePassword } from '~/utils/generate-password'
 import { DEFAULT_KEYS, DEFAULT_PASSWORD_LENGTH } from '~/utils/constants'
 import { copyTextToClipboard } from '~/utils/copy-to-clipboard'
 
-interface PasswordProviderProps extends ParentProps {
-	initialPassword: string
-}
-
 const PasswordContext = createContext<PasswordContextType>()
 
-export const PasswordProvider = (props: PasswordProviderProps) => {
+export const PasswordProvider = (props: ParentProps) => {
 	const [passwordLength, setPasswordLength] = createSignal(DEFAULT_PASSWORD_LENGTH)
 	const [passwordDictionary, setPasswordDictionary] = createSignal(DEFAULT_KEYS)
 	const [withUpper, setWithUpper] = createSignal(true)
@@ -20,7 +16,9 @@ export const PasswordProvider = (props: PasswordProviderProps) => {
 	const [withNumbers, setWithNumbers] = createSignal(true)
 	const [withSymbols, setWithSymbols] = createSignal(true)
 
-	const [password, setPassword] = createSignal(props.initialPassword)
+	const [password, setPassword] = createSignal(
+		generatePassword(passwordLength(), passwordDictionary())
+	)
 
 	const store: PasswordContextType = {
 		password,

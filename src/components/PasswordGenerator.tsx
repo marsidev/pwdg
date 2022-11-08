@@ -1,18 +1,13 @@
-import type { Component } from 'solid-js'
 import { Toaster } from 'solid-toast'
 import { PasswordOptions } from '~/components/PasswordOptions'
 import { ButtonsMenu } from '~/components/ButtonsMenu'
 import { PasswordPreview } from '~/components/PasswordPreview'
 import { PasswordProvider } from '~/components/PasswordContext'
 
-interface PasswordGeneratorProps {
-	initialPassword: string
-}
-
-export const PasswordGenerator: Component<PasswordGeneratorProps> = props => {
+export const PasswordGenerator = () => {
 	return (
 		<>
-			<PasswordProvider initialPassword={props.initialPassword}>
+			<PasswordProvider>
 				<div class='flex min-h-[400px] w-full max-w-2xl flex-col items-center justify-center gap-6 rounded-3xl border-4 border-white text-center'>
 					<PasswordPreview />
 					<ButtonsMenu />
