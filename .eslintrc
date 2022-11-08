@@ -18,21 +18,6 @@
 		"sourceType": "module"
 	},
 	"rules": {
-		"no-unused-vars": "off",
-		"@typescript-eslint/no-unused-vars": [
-			"warn",
-			{
-				"argsIgnorePattern": "^_",
-				"varsIgnorePattern": "^_",
-				"caughtErrorsIgnorePattern": "^_"
-			}
-		],
-		"space-before-function-paren": "off",
-		"no-multiple-empty-lines": "off",
-		"no-tabs": "off",
-		"indent": ["warn", "tab"],
-		"quotes": ["warn", "single"],
-		"jsx-quotes": ["warn", "prefer-single"],
 		"eol-last": "off"
 	},
 	"overrides": [
@@ -42,8 +27,6 @@
 			"parserOptions": {
 				"parser": "@typescript-eslint/parser",
 				"extraFileExtensions": [".astro"],
-				// The script of Astro components uses ESM.
-				"sourceType": "module",
 				"project": null
 			},
 			"rules": {
