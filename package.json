@@ -1,7 +1,8 @@
 {
-  "name": "@example/basics",
+  "name": "pwdg",
+  "packageManager": "pnpm@7.14.0",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "astro dev",
@@ -45,7 +46,6 @@
     "peerDependencyRules": {
       "ignoreMissing": [
         "@babel/core",
-        "typescript",
         "eslint-plugin-react"
       ]
     }
