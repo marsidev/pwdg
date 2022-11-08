@@ -1,5 +1,3 @@
-/* stylelint-disable comment-empty-line-before */
-
 .marsidev-slider {
 	appearance: none;
 	margin: 18px 0;
@@ -9,7 +7,6 @@
 	background-image: linear-gradient(rgb(167 139 250), rgb(167 139 250)); /* violet.400 */
 	background-size: 4.76% 100%;
 	background-repeat: no-repeat;
-	/* transition: background-image 1000ms ease-out; */
 }
 
 .marsidev-slider:focus {
