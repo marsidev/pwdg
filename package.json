@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "pnpm typecheck && astro build",
+    "build": "astro check && tsc --noEmit && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "typecheck": "astro check && tsc --noEmit",
@@ -48,5 +48,8 @@
         "eslint-plugin-react"
       ]
     }
+  },
+  "engines": {
+    "node": "16.x"
   }
 }
