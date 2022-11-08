@@ -1,0 +1,36 @@
+---
+import type { HTMLAttributes } from 'astro/types'
+export type Props = HTMLAttributes<'footer'>
+const { props } = Astro
+---
+
+<footer class='text-black flex flex-col items-center gap-2 mt-auto' {...props}>
+	<span>
+		{'Hecho por'}
+		<a
+			class='underline text-violet-600 font-bold'
+			href='https://github.com/marsidev'
+			target='_blank'>Luis Marsiglia</a
+		>{'.'}
+	</span>
+
+	<span>
+		{'Este proyecto es de '}
+		<a
+			class='underline text-violet-600 font-bold'
+			href='https://github.com/marsidev/pwd'
+			target='_blank'
+		>
+			código abierto</a
+		>{'. ✨'}
+	</span>
+
+	<a href='https://astro.build' target='_blank'>
+		<img
+			src='https://astro.badg.es/v1/built-with-astro/small.svg'
+			alt='Built with Astro'
+			width='150'
+			height='27.5'
+		/>
+	</a>
+</footer>
