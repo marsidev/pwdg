@@ -24,13 +24,14 @@ export const PasswordLength: Component = () => {
 
 	return (
 		<div class='flex w-full flex-col items-start justify-center gap-2 text-lg font-semibold text-black'>
-			<label for='marsidev-pwd-length' class='text-[1rem]'>
+			<label for='marsidev-pwd-length' id='pwd-length-label' class='text-[1rem]'>
 				Longitud de la contraseña
 			</label>
 
 			<div class='flex w-full flex-row items-center justify-start gap-2 text-[1rem] text-black'>
 				<input
 					class='h-[40px] w-[64px] rounded-md border border-violet-400 p-2 text-center text-[16px] shadow-[inset_0_1px_2px_0_rgba(0,0,0,0.25)] outline-violet-500'
+					aria-labelledby='pwd-length-label'
 					type='number'
 					step='1'
 					min={MIN_PASSWORD_LENGTH}
@@ -44,6 +45,7 @@ export const PasswordLength: Component = () => {
 				<input
 					class='marsidev-slider w-full cursor-pointer accent-violet-400'
 					type='range'
+					aria-labelledby='pwd-length-label'
 					step='1'
 					min={MIN_PASSWORD_LENGTH}
 					max={MAX_PASSWORD_LENGTH}
