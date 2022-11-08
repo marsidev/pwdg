@@ -94,9 +94,9 @@ export const PasswordProvider = (props: PasswordProviderProps) => {
 		const copy = copyTextToClipboard(password())
 
 		toast.promise(copy, {
-			loading: 'Copying',
-			success: <b>Password copied successfully!</b>,
-			error: <b>Something went wrong! 😔</b>
+			loading: 'Copiando',
+			success: <b>¡Contraseña copiada!</b>,
+			error: <b>¡Algo salió mal! 😔</b>
 		})
 	}
 
