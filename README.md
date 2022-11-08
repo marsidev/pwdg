@@ -2,7 +2,7 @@
 
 ![preview](preview.png)
 
-<p style="text-align: center;">
+<p align="center">
 	<strong>Generate strong passwords to stay safe over the internet.</strong>
 </p>
 
