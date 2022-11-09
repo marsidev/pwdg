@@ -1,10 +1,11 @@
+import type { Component } from 'solid-js'
 import { Toaster } from 'solid-toast'
 import { PasswordOptions } from '~/components/PasswordOptions'
 import { ButtonsMenu } from '~/components/ButtonsMenu'
 import { PasswordPreview } from '~/components/PasswordPreview'
 import { PasswordProvider } from '~/components/PasswordContext'
 
-export const PasswordGenerator = () => {
+export const PasswordGenerator: Component = () => {
 	return (
 		<>
 			<PasswordProvider>

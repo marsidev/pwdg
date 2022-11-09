@@ -1,5 +1,5 @@
 import type { ParentProps, Setter } from 'solid-js'
-import { createContext, createSignal, useContext } from 'solid-js'
+import { createContext, createSignal, onMount, useContext } from 'solid-js'
 import toast from 'solid-toast'
 import type { DictionaryKeys, PasswordContextType } from '~/types'
 import { generatePassword } from '~/utils/generate-password'
@@ -15,10 +15,9 @@ export const PasswordProvider = (props: ParentProps) => {
 	const [withLower, setWithLower] = createSignal(true)
 	const [withNumbers, setWithNumbers] = createSignal(true)
 	const [withSymbols, setWithSymbols] = createSignal(true)
+	const [password, setPassword] = createSignal('')
 
-	const [password, setPassword] = createSignal(
-		generatePassword(passwordLength(), passwordDictionary())
-	)
+	onMount(() => updatePassword())
 
 	const store: PasswordContextType = {
 		password,
