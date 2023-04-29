@@ -19,7 +19,7 @@ export const PasswordPreview: Component = () => {
 			</Match>
 
 			<Match when={password() !== ''}>
-				<div class="relative mt-6 flex min-h-[89px] w-full max-w-[800px] flex-wrap items-center justify-center break-all rounded-md border-t border-l border-r border-b-0 bg-white p-6 font-['Courier_Prime',ui-monospace,Monaco,Consolas,monospace] text-3xl text-black shadow-[0_2px_8px_rgba(0,0,0,0.15)] sm:text-4xl">
+				<div class="relative mt-6 flex min-h-[89px] w-full max-w-[800px] flex-wrap items-center justify-center break-all rounded-md border-b-0 border-l border-r border-t bg-white p-6 font-['Courier_Prime',ui-monospace,Monaco,Consolas,monospace] text-3xl text-black shadow-[0_2px_8px_rgba(0,0,0,0.15)] sm:text-4xl">
 					<For each={password().split('')}>
 						{char => {
 							return (
