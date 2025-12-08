@@ -8,7 +8,7 @@ export const PasswordPlaceholder = () => {
 		>
 			<For each={Array.from({ length: 16 })}>
 				{() => (
-					<div class='h-[28px] w-[14.5px] rounded-sm bg-gray-200 dark:bg-gray-700 sm:h-[34px] sm:w-[17.5px]'>
+					<div class='h-[28px] w-[14.5px] rounded-sm bg-gray-200 sm:h-[34px] sm:w-[17.5px] dark:bg-gray-700'>
 						<span class='invisible'>X</span>
 					</div>
 				)}

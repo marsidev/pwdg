@@ -8,7 +8,7 @@ module.exports = {
 	useTabs: true,
 	endOfLine: 'lf',
 	arrowParens: 'avoid',
-	plugins: [require('prettier-plugin-tailwindcss'), require('prettier-plugin-astro')],
+	plugins: ['prettier-plugin-tailwindcss', 'prettier-plugin-astro'],
 	astroAllowShorthand: false,
 	overrides: [
 		{
