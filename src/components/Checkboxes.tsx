@@ -1,5 +1,4 @@
 import type { Component } from 'solid-js'
-import '~/styles/checkbox.css'
 import { usePassword } from '~/components/PasswordContext'
 import { Checkbox } from '~/components/Checkbox'
 
@@ -17,7 +16,7 @@ export const Checkboxes: Component = () => {
 	} = usePassword()
 
 	return (
-		<div class='flex flex-col items-start justify-start px-0 font-semibold text-black sm:px-2'>
+		<div class='flex flex-col items-start justify-start gap-2 px-0 font-semibold text-black sm:px-2'>
 			<Checkbox
 				checked={uppercase()}
 				disabled={uppercase() && dictionary().length === 1}

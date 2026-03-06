@@ -10,7 +10,6 @@ export const GenerateIcon: Component<GenerateIconProps> = props => {
 			height='1.2em'
 			width='1.2em'
 			viewBox='0 0 26 23'
-			version='1.1'
 			xmlns='http://www.w3.org/2000/svg'
 			id='generate-icon'
 			style={{ transform: props.rotate, transition: 'all 0.2s linear' }}

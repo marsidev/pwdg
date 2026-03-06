@@ -1,0 +1,142 @@
+@import 'tailwindcss';
+
+/* Custom Range Slider Styles */
+#marsidev-pwd-range {
+	--value: 20%;
+}
+
+.marsidev-slider {
+	appearance: none;
+	width: 100%;
+	height: 8px;
+	border-radius: 4px;
+	background: linear-gradient(
+		to right,
+		#a78bfa 0%,
+		#a78bfa var(--value, 20%),
+		#ddd6fe var(--value, 20%),
+		#ddd6fe 100%
+	);
+	outline: none;
+	cursor: pointer;
+}
+
+.marsidev-slider::-webkit-slider-thumb {
+	appearance: none;
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	background: white;
+	border: 2px solid #a78bfa;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+	cursor: pointer;
+	transition: all 0.15s ease;
+}
+
+.marsidev-slider::-webkit-slider-thumb:hover {
+	transform: scale(1.1);
+	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.marsidev-slider::-webkit-slider-thumb:active {
+	transform: scale(0.95);
+}
+
+.marsidev-slider::-moz-range-thumb {
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	background: white;
+	border: 2px solid #a78bfa;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+	cursor: pointer;
+	transition: all 0.15s ease;
+}
+
+.marsidev-slider::-moz-range-thumb:hover {
+	transform: scale(1.1);
+	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.marsidev-slider::-moz-range-thumb:active {
+	transform: scale(0.95);
+}
+
+/* Focus styles for accessibility */
+.marsidev-slider:focus-visible {
+	outline: 2px solid #8b5cf6;
+	outline-offset: 2px;
+}
+
+.marsidev-slider::-webkit-slider-thumb:focus-visible {
+	outline: 2px solid #8b5cf6;
+	outline-offset: 2px;
+}
+
+/* Custom Checkbox Styles for better appearance */
+input[type='checkbox'] {
+	appearance: none;
+	width: 20px;
+	height: 20px;
+	border: 2px solid #a78bfa;
+	border-radius: 4px;
+	background: white;
+	cursor: pointer;
+	position: relative;
+	transition: all 0.15s ease;
+}
+
+input[type='checkbox']:checked {
+	background: #a78bfa;
+	border-color: #a78bfa;
+}
+
+input[type='checkbox']:checked::after {
+	content: '';
+	position: absolute;
+	left: 5px;
+	top: 1px;
+	width: 6px;
+	height: 12px;
+	border: solid white;
+	border-width: 0 2px 2px 0;
+	transform: rotate(45deg);
+}
+
+input[type='checkbox']:focus-visible {
+	outline: 2px solid #8b5cf6;
+	outline-offset: 2px;
+}
+
+input[type='checkbox']:hover:not(:disabled) {
+	border-color: #8b5cf6;
+}
+
+/* Ensure all interactive elements have proper focus styles */
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+	outline: 2px solid #8b5cf6;
+	outline-offset: 2px;
+}
+
+/* Smooth transitions for interactive elements */
+button,
+input,
+select,
+textarea,
+a {
+	transition: outline-offset 0.15s ease;
+}
+
+/* Number input styling */
+input[type='number'] {
+	appearance: textfield;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+	appearance: auto;
+	opacity: 1;
+}

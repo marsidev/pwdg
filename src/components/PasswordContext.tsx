@@ -100,5 +100,4 @@ export const PasswordProvider = (props: ParentProps) => {
 	return <PasswordContext.Provider value={store}>{props.children}</PasswordContext.Provider>
 }
 
-// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 export const usePassword = () => useContext(PasswordContext)!
